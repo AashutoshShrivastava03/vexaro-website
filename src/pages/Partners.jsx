@@ -7,37 +7,37 @@ import { useScrollReveal } from "../hooks/useScrollReveal";
 import { useSEO } from "../hooks/useSEO";
 
 const partners = [
-  { name:"Shiprocket",    cat:"Logistics Tech",   desc:"India's leading eCommerce shipping solution integrated with VEXARO's network." },
+  { name:"Shiprocket",    cat:"Courier Tech",   desc:"India's leading eCommerce shipping solution integrated with VEXARO's network." },
   { name:"Shopify India", cat:"E-commerce",        desc:"Seamless order sync between Shopify stores and VEXARO's fulfilment platform." },
   { name:"WooCommerce",   cat:"E-commerce",        desc:"Plugin-ready integration for WooCommerce merchants across India." },
   { name:"Razorpay",      cat:"Payments",          desc:"COD reconciliation and instant remittance powered by Razorpay." },
-  { name:"Nykaa",         cat:"Retail Partner",    desc:"Trusted courier partner for last-mile logistics across Nykaa's seller network." },
+    { name:"Nykaa",         cat:"Retail Partner",    desc:"Trusted courier partner for last-mile delivery across Nykaa's seller network." },
   { name:"Meesho",        cat:"Social Commerce",   desc:"Powering deliveries for Meesho sellers across Tier 2 and Tier 3 cities." },
 ];
 
 const partnerTypes = [
-  { icon:<FaTruck size={22} className="text-navy"/>,     title:"Logistics Partners",   text:"Last-mile delivery agents, fleet operators, and hub partners across 500+ cities.", color:"navy" },
+  { icon:<FaTruck size={22} className="text-navy"/>,     title:"Courier Partners",   text:"Last-mile delivery agents, fleet operators, and hub partners across 500+ cities.", color:"navy" },
   { icon:<FaShoppingCart size={22} className="text-orange"/>, title:"E-commerce Platforms", text:"Shopify, WooCommerce, Magento and custom platform integrations via our open API.", color:"orange" },
   { icon:<FaGlobe size={22} className="text-navy"/>,     title:"Business Associates",  text:"B2B clients, resellers, and franchise operators expanding our reach across India.", color:"navy" },
   { icon:<FaHandshake size={22} className="text-orange"/>, title:"Technology Partners", text:"SaaS platforms, ERP systems, and WMS providers integrated into our ecosystem.", color:"orange" },
 ];
 
 export default function Partners() {
-  useSEO({ title:"Partners", description:"VEXARO's partner ecosystem — logistics, e-commerce, and technology partners across India." });
+  useSEO({ title:"Partners", description:"VEXARO's partner ecosystem — courier, e-commerce, and technology partners across India." });
   const s1 = useScrollReveal();
   const s2 = useScrollReveal();
   const s3 = useScrollReveal(0.05);
 
   return (
     <>
-      <PageHero title="Our Partners" subtitle="Building India's most connected logistics ecosystem — together with our trusted partners." breadcrumb="Partners"/>
+      <PageHero title="Our Partners" subtitle="Building India's most connected courier ecosystem — together with our trusted partners." breadcrumb="Partners"/>
 
       {/* Partner types */}
       <section className="section-padding bg-white flex-1" ref={s1.ref}>
         <div className="container-custom">
           <motion.div variants={fadeUp} initial="hidden" animate={s1.isInView?"visible":"hidden"} className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-bold font-heading text-charcoal mb-3">Partnership Categories</h2>
-            <p className="text-graphite font-body max-w-xl mx-auto">VEXARO works with a diverse ecosystem of partners to deliver seamless logistics.</p>
+            <p className="text-graphite font-body max-w-xl mx-auto">VEXARO works with a diverse ecosystem of partners to deliver seamless courier services.</p>
           </motion.div>
           <motion.div variants={staggerContainer} initial="hidden" animate={s1.isInView?"visible":"hidden"}
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">

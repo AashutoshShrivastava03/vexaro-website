@@ -40,12 +40,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-white/50 text-sm font-body leading-relaxed mb-2">
-              VEXARO Courier Solution Private Limited
-            </p>
-            <p className="text-white/35 text-xs font-body mb-5">
-              CIN: U53200MP2026PTC084168
-              <br />
-              Incorporated 15 May 2026 · RoC-Gwalior
+              VEXARO Courier
             </p>
             <div className="flex gap-3">
               {[
@@ -125,9 +120,9 @@ export default function Footer() {
                 ["Domestic Courier", "/services"],
                 ["Express Delivery", "/services"],
                 ["Same-Day Delivery", "/services"],
-                ["B2B Logistics", "/services"],
+                ["B2B Services", "/services"],
                 ["E-commerce Shipping", "/services"],
-                ["Reverse Logistics", "/services"],
+                ["Returns Management", "/services"],
                 ["Warehousing", "/services"],
                 ["Bulk Freight", "/services"],
               ].map(([s, path]) => (
@@ -221,8 +216,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="container-custom py-5 flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="text-white/30 text-xs font-body">
-            © {new Date().getFullYear()} VEXARO Courier Solution Pvt. Ltd. ·
-            CIN: U53200MP2026PTC084168
+            © {new Date().getFullYear()} VEXARO Courier
           </p>
           <div className="flex gap-5">
             <Link

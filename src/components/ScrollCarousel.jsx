@@ -83,7 +83,7 @@ const SLIDES = [
     tag: "04 / 04",
     title: "Technology-First Platform",
     headline: "Plug in. Automate.\nScale effortlessly.",
-    body: "Our API-ready logistics platform integrates seamlessly with Shopify, WooCommerce, Magento, and custom systems. Auto-manifest generation, smart dashboards, COD management, and returns — all in one place.",
+    body: "Our API-ready courier platform integrates seamlessly with Shopify, WooCommerce, Magento, and custom systems. Auto-manifest generation, smart dashboards, COD management, and returns — all in one place.",
     bullets: [
       "API integrations for all platforms",
       "Auto-manifest generation",
@@ -340,8 +340,8 @@ export default function ScrollCarousel() {
         <h2 className="text-3xl md:text-4xl font-bold font-heading text-charcoal mb-3">
           Built for Modern Commerce
         </h2>
-        <p className="text-graphite font-body max-w-xl mx-auto text-base">
-          Scroll to explore what makes VEXARO the logistics partner of choice
+          <p className="text-graphite font-body max-w-xl mx-auto text-base">
+          Scroll to explore what makes VEXARO the courier partner of choice
           for 10,000+ Indian businesses.
         </p>
       </div>

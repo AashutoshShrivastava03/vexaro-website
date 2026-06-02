@@ -37,7 +37,7 @@ export default function Navbar() {
         <div className="container-custom flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
           <Link to="/" className="flex-shrink-0">
-            <img src="/new-logo.png" alt="VEXARO Courier Solution Private Limited"
+            <img src="/new-logo.png" alt="VEXARO Courier"
               className="h-10 md:h-12 w-auto object-contain" style={{ maxWidth:"220px" }} />
           </Link>
 

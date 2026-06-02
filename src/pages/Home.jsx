@@ -357,7 +357,7 @@ function PremiumCta({ isInView, sectionRef }) {
           <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 border border-white/15 rounded-full mb-5">
             <FaLocationArrow className="text-orange" size={11} />
             <span className="text-white/75 text-xs font-medium font-heading uppercase tracking-wider">
-              Logistics That Move With You
+              Courier Services That Move With You
             </span>
           </div>
           <h2 className="text-3xl md:text-5xl font-bold font-heading text-white mb-4">
@@ -390,7 +390,7 @@ export default function Home() {
   useSEO({
     title: "Home",
     description:
-      "VEXARO Courier Solution — India's modern logistics partner. Express delivery, B2B logistics, e-commerce shipping across 500+ cities.",
+      "VEXARO — India's modern courier partner. Express delivery, B2B courier services, e-commerce shipping across 500+ cities.",
   });
 
   const heroRef = useRef(null);
@@ -433,7 +433,7 @@ export default function Home() {
         <div className="absolute inset-0 pt-20 md:pt-24 z-0 pointer-events-none flex justify-end items-end">
           <img
             src="/hero_background.png"
-            alt="Logistics Background"
+            alt="Courier Background"
             className="w-full h-full object-contain object-bottom lg:object-right-bottom opacity-90"
           />
         </div>
@@ -462,7 +462,7 @@ export default function Home() {
               >
                 <span className="w-2 h-2 rounded-full bg-orange animate-pulse" />
                 <span className="text-charcoal font-semibold text-[10px] sm:text-xs uppercase tracking-widest font-heading">
-                  India's Premium Logistics Partner
+                  India's Premium Courier Partner
                 </span>
               </motion.div>
 
@@ -505,7 +505,7 @@ export default function Home() {
               >
                 VEXARO powers 50,000+ daily shipments across 500+ cities —
                 combining technology, speed, and reliability to build the future
-                of Indian logistics.
+                of India's courier services.
               </motion.p>
 
               <motion.div
@@ -628,14 +628,13 @@ export default function Home() {
                 </span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold font-heading text-charcoal mb-5 leading-tight">
-                Redefining Logistics for
+                Redefining Courier Services for
                 <br />
                 <span className="gradient-text-navy">Modern India</span>
               </h2>
               <p className="text-graphite font-body leading-relaxed mb-5">
-                VEXARO Courier Solution Pvt. Ltd. is a technology-driven
-                logistics company incorporated on 15th May 2026, headquartered
-                in Vijay Nagar, Indore. We deliver with precision, transparency,
+                VEXARO is a technology-driven courier company headquartered in
+                Vijay Nagar, Indore. We deliver with precision, transparency,
                 and genuine care across every pin code we serve.
               </p>
               <p className="text-graphite font-body leading-relaxed mb-8">
@@ -732,7 +731,7 @@ export default function Home() {
               </span>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold font-heading text-charcoal mb-3">
-              Complete Logistics Solutions
+              Complete Courier Solutions
             </h2>
             <p className="text-graphite font-body max-w-xl mx-auto">
               From express courier to enterprise freight — every shipping need,

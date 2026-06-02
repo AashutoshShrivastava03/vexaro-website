@@ -19,7 +19,7 @@ export default function Contact() {
   useSEO({
     title: "Contact Us",
     description:
-      "Contact VEXARO Courier Solution Pvt. Ltd. in Vijay Nagar, Indore, Madhya Pradesh. CIN: U53200MP2026PTC084168.",
+      "Contact VEXARO in Vijay Nagar, Indore, Madhya Pradesh.",
   });
   const s1 = useScrollReveal();
   const s2 = useScrollReveal();
@@ -207,7 +207,7 @@ export default function Contact() {
                         setForm({ ...form, message: e.target.value });
                         setErrors({ ...errors, message: "" });
                       }}
-                      placeholder="Tell us about your logistics requirements..."
+                      placeholder="Tell us about your courier requirements..."
                       className={`w-full px-4 py-3 border rounded-btn font-body text-sm focus:outline-none focus:border-navy focus:ring-2 focus:ring-navy/15 transition-all resize-none bg-white ${errors.message ? "border-red-400 bg-red-50" : "border-soft-border"}`}
                     />
                     {errors.message && (
@@ -296,34 +296,12 @@ export default function Contact() {
                   },
                   {
                     icon: <FaIdCard size={15} className="text-orange" />,
-                    label: "Company Details",
+                    label: "About",
                     full: true,
                     content: (
                       <div className="text-graphite text-sm font-body space-y-0.5 leading-relaxed">
-                        <div>
-                          CIN:{" "}
-                          <span className="text-charcoal font-medium">
-                            U53200MP2026PTC084168
-                          </span>
-                        </div>
-                        <div>
-                          Incorporated:{" "}
-                          <span className="text-charcoal font-medium">
-                            15 May 2026
-                          </span>
-                        </div>
-                        <div>
-                          RoC:{" "}
-                          <span className="text-charcoal font-medium">
-                            RoC-Gwalior
-                          </span>
-                        </div>
-                        <div>
-                          Status:{" "}
-                          <span className="text-green-600 font-semibold">
-                            Active
-                          </span>
-                        </div>
+                        <div>Operating across 500+ cities in India</div>
+                        <div>Customer support available 24/7</div>
                       </div>
                     ),
                   },
@@ -404,12 +382,10 @@ export default function Contact() {
             className="flex flex-wrap gap-4 justify-center"
           >
             {[
-              ["VEXARO Courier Solution Pvt. Ltd.", "Company Name"],
-              ["U53200MP2026PTC084168", "CIN"],
-              ["15 May 2026", "Incorporated"],
-              ["Active", "Status"],
-              ["RoC-Gwalior", "Registrar"],
-              ["₹1,00,000", "Auth. Capital"],
+              ["500+ Cities", "Coverage"],
+              ["24/7 Support", "Support"],
+              ["Trusted Partners", "Partners"],
+              ["Technology-First", "Edge"],
             ].map(([val, lbl], i) => (
               <div
                 key={lbl}

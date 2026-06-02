@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 const DEFAULT = {
   siteName: "VEXARO Courier Solutions",
-  description: "India's modern logistics partner — 50,000+ daily shipments across 500+ cities. Express, Same-Day, B2B, E-commerce courier services.",
+  description: "India's modern courier partner — 50,000+ daily shipments across 500+ cities. Express, Same-Day, B2B, E-commerce courier services.",
   image: "https://vexaro.in/og-image.jpg",
 };
 

@@ -66,7 +66,7 @@ export default function Pricing() {
     <>
       <PageHero 
         title="Transparent Pricing" 
-        subtitle="Choose the best logistics plan for your enterprise with zero hidden costs." 
+        subtitle="Choose the best courier plan for your enterprise with zero hidden costs." 
         breadcrumb="Pricing" 
       />
 
@@ -85,7 +85,7 @@ export default function Pricing() {
               Simple, <span className="text-orange">Predictable</span> Pricing
             </h2>
             <p className="text-graphite font-body text-lg">
-              Unlock enterprise-grade logistics at the lowest market charges.
+              Unlock enterprise-grade courier services at the lowest market charges.
             </p>
           </motion.div>
 

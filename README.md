@@ -1,6 +1,6 @@
 # VEXARO Courier Solutions — Official Website v1.0
 
-A modern, premium logistics website built for VEXARO Courier Solutions Pvt. Ltd. (2026 Edition)
+A modern, premium courier website built for VEXARO Courier Solutions
 
 ## Quick Start
 
@@ -44,4 +44,4 @@ React 18 + Vite | Tailwind CSS v3 | Framer Motion | React Router v6 | Swiper.js 
 | Body | Inter |
 
 ---
-Built for VEXARO Courier Solutions Pvt. Ltd. — Confidential
+Built for VEXARO Courier — Confidential

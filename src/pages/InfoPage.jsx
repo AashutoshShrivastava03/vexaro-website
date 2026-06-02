@@ -9,7 +9,7 @@ const pageContent = {
   terms: {
     title: "Terms & Conditions",
     breadcrumb: "Terms & Conditions",
-    subtitle: "Clear service terms for using VEXARO courier, logistics, and business shipping solutions.",
+    subtitle: "Clear service terms for using VEXARO courier and business shipping solutions.",
     seoTitle: "Terms & Conditions",
     items: [
       "Shipments must comply with applicable laws, courier restrictions, and declared package details.",
@@ -24,7 +24,7 @@ const pageContent = {
     subtitle: "How VEXARO handles customer, shipment, and business enquiry information responsibly.",
     seoTitle: "Privacy Policy",
     items: [
-      "We collect contact, shipment, and enquiry details only to provide logistics services and support.",
+      "We collect contact, shipment, and enquiry details only to provide courier services and support.",
       "Information may be shared with delivery partners only when required to complete pickup, transit, or delivery.",
       "We use reasonable technical and operational safeguards to protect submitted business and customer data.",
       "Customers can request corrections or support by contacting vexarocouriersolution@gmail.com.",
@@ -37,9 +37,9 @@ const pageContent = {
     seoTitle: "Resources",
     items: [
       "Choose Express Delivery for time-sensitive metro and business corridor shipments.",
-      "Use B2B Logistics for scheduled bulk movement, SLA-based operations, and account-managed dispatches.",
+      "Use B2B Services for scheduled bulk movement, SLA-based operations, and account-managed dispatches.",
       "Use Warehousing Solutions when inventory storage, packing, and fulfilment need to move together.",
-      "Use Reverse Logistics to simplify returns, pickup coordination, and seller-side visibility.",
+      "Use Returns Management to simplify returns, pickup coordination, and seller-side visibility.",
     ],
   },
 };

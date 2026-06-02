@@ -6,12 +6,12 @@ import { fadeUp, staggerContainer, staggerItem } from "../animations/variants";
 import { useScrollReveal } from "../hooks/useScrollReveal";
 
 const openings = [
-  { title: "Senior Backend Engineer", dept: "Technology", location: "Mumbai (Hybrid)", type: "Full-time", desc: "Build and scale our logistics platform APIs, real-time tracking systems, and microservices infrastructure." },
+  { title: "Senior Backend Engineer", dept: "Technology", location: "Mumbai (Hybrid)", type: "Full-time", desc: "Build and scale our courier platform APIs, real-time tracking systems, and microservices infrastructure." },
   { title: "Operations Executive", dept: "Operations", location: "Multiple Cities", type: "Full-time", desc: "Coordinate daily pickup/delivery schedules, partner agent management, and shipment exception handling." },
   { title: "Business Development Manager", dept: "Sales", location: "Bangalore / Delhi", type: "Full-time", desc: "Identify and onboard enterprise and e-commerce clients, manage key account relationships." },
   { title: "Product Manager — Tracking", dept: "Product", location: "Mumbai (Hybrid)", type: "Full-time", desc: "Own the shipment tracking product end-to-end — from customer experience to carrier integrations." },
   { title: "Customer Success Associate", dept: "Support", location: "Remote (India)", type: "Full-time", desc: "Ensure business clients have an outstanding experience — from onboarding to daily operational support." },
-  { title: "Fleet Coordinator", dept: "Logistics", location: "Pune / Hyderabad", type: "Full-time", desc: "Manage last-mile delivery fleet, route optimisation, driver coordination, and performance tracking." },
+  { title: "Fleet Coordinator", dept: "Fleet", location: "Pune / Hyderabad", type: "Full-time", desc: "Manage last-mile delivery fleet, route optimisation, driver coordination, and performance tracking." },
 ];
 
 const perks = [
@@ -30,7 +30,7 @@ export default function Careers() {
 
   return (
     <>
-      <PageHero title="Join VEXARO" subtitle="Build the future of Indian logistics. We're looking for driven individuals who want to make a real impact." breadcrumb="Careers" />
+      <PageHero title="Join VEXARO" subtitle="Build the future of Indian courier services. We're looking for driven individuals who want to make a real impact." breadcrumb="Careers" />
 
       <section className="section-padding bg-white flex-1" ref={s1.ref}>
         <div className="container-custom">

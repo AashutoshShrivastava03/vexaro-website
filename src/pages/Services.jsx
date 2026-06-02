@@ -10,13 +10,13 @@ import { useSEO } from "../hooks/useSEO";
 const iconMap = { FaTruck, FaBolt, FaClock, FaIndustry, FaWarehouse, FaShoppingCart, FaBoxes, FaUndo };
 
 export default function Services() {
-  useSEO({ title:"Services", description:"VEXARO services: Domestic Courier, Express Delivery, Same-Day, B2B Logistics, Warehousing, E-commerce Shipping across India." });
+  useSEO({ title:"Services", description:"VEXARO services: Domestic Courier, Express Delivery, Same-Day, B2B Services, Warehousing, E-commerce Shipping across India." });
   const s1 = useScrollReveal(0.05);
   const s2 = useScrollReveal(0.05);
 
   return (
     <>
-      <PageHero title="Our Services" subtitle="End-to-end logistics solutions for every shipping need — from individual parcels to enterprise freight." breadcrumb="Services"/>
+      <PageHero title="Our Services" subtitle="End-to-end courier solutions for every shipping need — from individual parcels to enterprise freight." breadcrumb="Services"/>
 
       <section className="section-padding bg-white flex-1" ref={s1.ref}>
         <div className="container-custom">
@@ -66,8 +66,8 @@ export default function Services() {
       <section className="py-16 bg-light-blue border-t border-soft-border" ref={s2.ref}>
         <div className="container-custom text-center">
           <motion.div variants={fadeUp} initial="hidden" animate={s2.isInView?"visible":"hidden"}>
-            <h2 className="text-3xl font-bold font-heading text-charcoal mb-3">Need a Custom Logistics Solution?</h2>
-            <p className="text-graphite font-body mb-7 max-w-lg mx-auto">Our enterprise team specialises in tailored logistics contracts for high-volume businesses.</p>
+            <h2 className="text-3xl font-bold font-heading text-charcoal mb-3">Need a Custom Courier Solution?</h2>
+            <p className="text-graphite font-body mb-7 max-w-lg mx-auto">Our enterprise team specialises in tailored courier contracts for high-volume businesses.</p>
             <Link to="/contact" className="inline-flex items-center gap-2 px-8 py-3.5 gradient-navy text-white font-semibold font-heading rounded-btn shadow-navy hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200">
               Talk to Our Team <FaArrowRight size={14}/>
             </Link>

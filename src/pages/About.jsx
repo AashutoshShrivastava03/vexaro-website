@@ -7,12 +7,12 @@ import { useScrollReveal } from "../hooks/useScrollReveal";
 import { useSEO } from "../hooks/useSEO";
 
 export default function About() {
-  useSEO({ title:"About Us", description:"Learn about VEXARO Courier Solution Pvt. Ltd., incorporated May 2026, headquartered in Indore, MP." });
+  useSEO({ title:"About Us", description:"Learn about VEXARO — headquartered in Indore, MP." });
   const s1=useScrollReveal(), s2=useScrollReveal(), s3=useScrollReveal(), s4=useScrollReveal(), s5=useScrollReveal();
 
   return (
     <>
-      <PageHero title="About VEXARO" subtitle="The story behind India's modern logistics company — built on trust, powered by technology." breadcrumb="About Us"/>
+      <PageHero title="About VEXARO" subtitle="The story behind India's modern courier company — built on trust, powered by technology." breadcrumb="About Us"/>
 
       {/* Story */}
       <section className="section-padding bg-white flex-1" ref={s1.ref}>
@@ -26,13 +26,13 @@ export default function About() {
                 Born in Indore.<br/><span className="gradient-text-navy">Built for India.</span>
               </h2>
               <p className="text-graphite font-body leading-relaxed mb-4">
-                VEXARO Courier Solution Pvt. Ltd. was incorporated on <strong>15th May 2026</strong> in Vijay Nagar, Indore, Madhya Pradesh — with a singular vision: to create a logistics company that combines reliability with the speed of modern technology.
+                VEXARO was founded in Vijay Nagar, Indore with a singular vision: to create a courier company that combines reliability with the speed of modern technology.
               </p>
               <p className="text-graphite font-body leading-relaxed mb-6">
-                Founded by <strong>Sonu Tiwari</strong> and <strong>Nikhil Pratap Singh</strong>, VEXARO was built from the ground up with a technology-first approach, targeting the underserved mid-India logistics corridor and rapidly expanding nationwide.
+                Founded by <strong>Sonu Tiwari</strong> and <strong>Nikhil Pratap Singh</strong>, VEXARO was built from the ground up with a technology-first approach, targeting the underserved mid-India courier corridor and expanding nationwide.
               </p>
               <ul className="space-y-3">
-                {["Incorporated 15 May 2026 · RoC-Gwalior","CIN: U53200MP2026PTC084168","Headquartered in Vijay Nagar, Indore, MP","Active status — Courier activities registered"].map((item,i)=>(
+                {["Headquartered in Vijay Nagar, Indore, MP","Operating across 500+ cities","Technology-first courier services","Customer-first culture"].map((item,i)=>(
                   <li key={i} className="flex items-center gap-3 text-charcoal text-sm font-body">
                     <FaCheckCircle className={i%2===0?"text-navy":"text-orange"} size={14}/>{item}
                   </li>
@@ -42,8 +42,8 @@ export default function About() {
             <motion.div variants={slideRight} initial="hidden" animate={s1.isInView?"visible":"hidden"}>
               <div className="relative">
                 <div className="bg-light-blue border border-soft-border rounded-card p-8 relative z-10">
-                  <div className="text-6xl font-bold font-heading gradient-text-navy mb-2">2026</div>
-                  <div className="text-graphite text-sm font-body mb-1">Year Founded</div>
+                  <div className="text-6xl font-bold font-heading gradient-text-navy mb-2">Established</div>
+                  <div className="text-graphite text-sm font-body mb-1">Serving Customers Nationwide</div>
                   <div className="text-graphite/60 text-xs font-body mb-6">Vijay Nagar, Indore, Madhya Pradesh</div>
                   <div className="grid grid-cols-2 gap-4">
                     {[{v:"50K+",l:"Daily Shipments"},{v:"500+",l:"Cities Served"},{v:"10K+",l:"Business Clients"},{v:"98.5%",l:"Success Rate"}].map((s,i)=>(
@@ -70,8 +70,8 @@ export default function About() {
           <motion.div variants={staggerContainer} initial="hidden" animate={s2.isInView?"visible":"hidden"}
             className="grid md:grid-cols-3 gap-6">
             {[
-              {icon:<FaBullseye size={22} className="text-orange"/>, title:"Our Mission", text:"To make logistics effortless for every Indian business — from first-time entrepreneurs to established enterprises — through technology, reliability, and genuine care.", bg:"bg-orange-50 border-orange/20"},
-              {icon:<FaEye size={22} className="text-navy"/>,       title:"Our Vision",  text:"To become India's most trusted logistics technology company — powering commerce across every city, town, and village with speed and transparency.",              bg:"bg-navy-50 border-navy/20"},
+              {icon:<FaBullseye size={22} className="text-orange"/>, title:"Our Mission", text:"To make courier services effortless for every Indian business — from first-time entrepreneurs to established enterprises — through technology, reliability, and genuine care.", bg:"bg-orange-50 border-orange/20"},
+              {icon:<FaEye size={22} className="text-navy"/>,       title:"Our Vision",  text:"To become India's most trusted courier technology company — powering commerce across every city, town, and village with speed and transparency.",              bg:"bg-navy-50 border-navy/20"},
               {icon:<FaHeart size={22} className="text-orange"/>,   title:"Our Values",  text:"Trust over transactions. Speed with safety. Technology with humanity. Every shipment tells a story — and we treat each one with the respect it deserves.",     bg:"bg-orange-50 border-orange/20"},
             ].map((card,i)=>(
               <motion.div key={i} variants={staggerItem}
@@ -127,7 +127,7 @@ export default function About() {
             </blockquote>
             <div className="w-12 h-1 gradient-orange rounded-full mx-auto mb-4"/>
             <div className="font-semibold font-heading text-charcoal">Sonu Tiwari & Nikhil Pratap Singh</div>
-            <div className="text-graphite text-sm font-body">Co-Founders, VEXARO Courier Solution Pvt. Ltd.</div>
+            <div className="text-graphite text-sm font-body">Co-Founders, VEXARO Courier</div>
           </motion.div>
         </div>
       </section>
