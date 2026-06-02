@@ -26,7 +26,7 @@ export default function About() {
                 Born in Indore.<br/><span className="gradient-text-navy">Built for India.</span>
               </h2>
               <p className="text-graphite font-body leading-relaxed mb-4">
-                VEXARO Courier Solution was founded in Vijay Nagar, Indore, Madhya Pradesh — with a singular vision: to create a courier company that combines reliability with the speed of modern technology.
+                VEXARO Courier Solution Pvt. Ltd. was founded in Vijay Nagar, Indore, Madhya Pradesh — with a singular vision: to create a courier company that combines reliability with the speed of modern technology.
               </p>
               <p className="text-graphite font-body leading-relaxed mb-6">
                 Founded by <strong>Sonu Tiwari</strong> and <strong>Nikhil Pratap Singh</strong>, VEXARO was built from the ground up with a technology-first approach, targeting underserved regions and rapidly expanding nationwide.
@@ -127,7 +127,7 @@ export default function About() {
             </blockquote>
             <div className="w-12 h-1 gradient-orange rounded-full mx-auto mb-4"/>
             <div className="font-semibold font-heading text-charcoal">Sonu Tiwari & Nikhil Pratap Singh</div>
-            <div className="text-graphite text-sm font-body">Co-Founders, VEXARO Courier Solution</div>
+            <div className="text-graphite text-sm font-body">Co-Founders, VEXARO Courier Solution Pvt. Ltd.</div>
           </motion.div>
         </div>
       </section>
