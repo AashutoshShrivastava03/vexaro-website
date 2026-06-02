@@ -18,8 +18,7 @@ import { useSEO } from "../hooks/useSEO";
 export default function Contact() {
   useSEO({
     title: "Contact Us",
-    description:
-      "Contact VEXARO in Vijay Nagar, Indore, Madhya Pradesh.",
+    description: "Contact VEXARO in Vijay Nagar, Indore, Madhya Pradesh.",
   });
   const s1 = useScrollReveal();
   const s2 = useScrollReveal();

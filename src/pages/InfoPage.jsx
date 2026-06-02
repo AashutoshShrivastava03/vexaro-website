@@ -1,6 +1,11 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { FaArrowRight, FaCheckCircle, FaShieldAlt, FaTruck } from "react-icons/fa";
+import {
+  FaArrowRight,
+  FaCheckCircle,
+  FaShieldAlt,
+  FaTruck,
+} from "react-icons/fa";
 import PageHero from "../components/PageHero";
 import { fadeUp, staggerContainer, staggerItem } from "../animations/variants";
 import { useSEO } from "../hooks/useSEO";
@@ -9,7 +14,8 @@ const pageContent = {
   terms: {
     title: "Terms & Conditions",
     breadcrumb: "Terms & Conditions",
-    subtitle: "Clear service terms for using VEXARO courier and business shipping solutions.",
+    subtitle:
+      "Clear service terms for using VEXARO courier and business shipping solutions.",
     seoTitle: "Terms & Conditions",
     items: [
       "Shipments must comply with applicable laws, courier restrictions, and declared package details.",
@@ -21,7 +27,8 @@ const pageContent = {
   privacy: {
     title: "Privacy Policy",
     breadcrumb: "Privacy Policy",
-    subtitle: "How VEXARO handles customer, shipment, and business enquiry information responsibly.",
+    subtitle:
+      "How VEXARO handles customer, shipment, and business enquiry information responsibly.",
     seoTitle: "Privacy Policy",
     items: [
       "We collect contact, shipment, and enquiry details only to provide courier services and support.",
@@ -33,7 +40,8 @@ const pageContent = {
   resources: {
     title: "Resources",
     breadcrumb: "Resources",
-    subtitle: "Useful service guidance for businesses planning shipping, fulfilment, and delivery operations.",
+    subtitle:
+      "Useful service guidance for businesses planning shipping, fulfilment, and delivery operations.",
     seoTitle: "Resources",
     items: [
       "Choose Express Delivery for time-sensitive metro and business corridor shipments.",
@@ -53,7 +61,11 @@ export default function InfoPage({ type }) {
 
   return (
     <>
-      <PageHero title={content.title} subtitle={content.subtitle} breadcrumb={content.breadcrumb} />
+      <PageHero
+        title={content.title}
+        subtitle={content.subtitle}
+        breadcrumb={content.breadcrumb}
+      />
       <section className="section-padding bg-white flex-1">
         <div className="container-custom">
           <motion.div
@@ -62,23 +74,44 @@ export default function InfoPage({ type }) {
             animate="visible"
             className="grid lg:grid-cols-[1fr_340px] gap-8 items-start"
           >
-            <motion.div variants={staggerItem} className="rounded-card border border-soft-border bg-light-blue p-6 md:p-8">
+            <motion.div
+              variants={staggerItem}
+              className="rounded-card border border-soft-border bg-light-blue p-6 md:p-8"
+            >
               <div className="grid gap-4">
                 {content.items.map((item, index) => (
-                  <div key={item} className="flex gap-3 rounded-card border border-white/80 bg-white p-4 shadow-card">
-                    <FaCheckCircle className={index % 2 === 0 ? "text-navy mt-0.5" : "text-orange mt-0.5"} size={15} />
-                    <p className="text-sm leading-relaxed text-graphite font-body">{item}</p>
+                  <div
+                    key={item}
+                    className="flex gap-3 rounded-card border border-white/80 bg-white p-4 shadow-card"
+                  >
+                    <FaCheckCircle
+                      className={
+                        index % 2 === 0
+                          ? "text-navy mt-0.5"
+                          : "text-orange mt-0.5"
+                      }
+                      size={15}
+                    />
+                    <p className="text-sm leading-relaxed text-graphite font-body">
+                      {item}
+                    </p>
                   </div>
                 ))}
               </div>
             </motion.div>
-            <motion.aside variants={fadeUp} className="rounded-card border border-soft-border bg-white p-6 shadow-card">
+            <motion.aside
+              variants={fadeUp}
+              className="rounded-card border border-soft-border bg-white p-6 shadow-card"
+            >
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl gradient-navy text-white">
                 {type === "privacy" ? <FaShieldAlt /> : <FaTruck />}
               </div>
-              <h2 className="font-heading text-xl font-bold text-charcoal mb-2">Need help?</h2>
+              <h2 className="font-heading text-xl font-bold text-charcoal mb-2">
+                Need help?
+              </h2>
               <p className="text-sm leading-relaxed text-graphite font-body mb-5">
-                Our team can help you choose the right VEXARO service, quote, or shipping workflow.
+                Our team can help you choose the right VEXARO service, quote, or
+                shipping workflow.
               </p>
               <Link
                 to="/contact"

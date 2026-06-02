@@ -7,7 +7,7 @@ import { useScrollReveal } from "../hooks/useScrollReveal";
 import { useSEO } from "../hooks/useSEO";
 
 export default function About() {
-  useSEO({ title:"About Us", description:"Learn about VEXARO — headquartered in Indore, MP." });
+  useSEO({ title:"About Us", description:"Learn about VEXARO Courier Solution, headquartered in Indore, MP. India's modern courier partner." });
   const s1=useScrollReveal(), s2=useScrollReveal(), s3=useScrollReveal(), s4=useScrollReveal(), s5=useScrollReveal();
 
   return (
@@ -26,13 +26,13 @@ export default function About() {
                 Born in Indore.<br/><span className="gradient-text-navy">Built for India.</span>
               </h2>
               <p className="text-graphite font-body leading-relaxed mb-4">
-                VEXARO was founded in Vijay Nagar, Indore with a singular vision: to create a courier company that combines reliability with the speed of modern technology.
+                VEXARO Courier Solution was founded in Vijay Nagar, Indore, Madhya Pradesh — with a singular vision: to create a courier company that combines reliability with the speed of modern technology.
               </p>
               <p className="text-graphite font-body leading-relaxed mb-6">
-                Founded by <strong>Sonu Tiwari</strong> and <strong>Nikhil Pratap Singh</strong>, VEXARO was built from the ground up with a technology-first approach, targeting the underserved mid-India courier corridor and expanding nationwide.
+                Founded by <strong>Sonu Tiwari</strong> and <strong>Nikhil Pratap Singh</strong>, VEXARO was built from the ground up with a technology-first approach, targeting underserved regions and rapidly expanding nationwide.
               </p>
               <ul className="space-y-3">
-                {["Headquartered in Vijay Nagar, Indore, MP","Operating across 500+ cities","Technology-first courier services","Customer-first culture"].map((item,i)=>(
+                {["Headquartered in Vijay Nagar, Indore, MP","500+ Cities across India","50,000+ daily shipments","10,000+ trusted clients"].map((item,i)=>(
                   <li key={i} className="flex items-center gap-3 text-charcoal text-sm font-body">
                     <FaCheckCircle className={i%2===0?"text-navy":"text-orange"} size={14}/>{item}
                   </li>
@@ -42,8 +42,8 @@ export default function About() {
             <motion.div variants={slideRight} initial="hidden" animate={s1.isInView?"visible":"hidden"}>
               <div className="relative">
                 <div className="bg-light-blue border border-soft-border rounded-card p-8 relative z-10">
-                  <div className="text-6xl font-bold font-heading gradient-text-navy mb-2">Established</div>
-                  <div className="text-graphite text-sm font-body mb-1">Serving Customers Nationwide</div>
+                  <div className="text-6xl font-bold font-heading gradient-text-navy mb-2">2026</div>
+                  <div className="text-graphite text-sm font-body mb-1">Year Founded</div>
                   <div className="text-graphite/60 text-xs font-body mb-6">Vijay Nagar, Indore, Madhya Pradesh</div>
                   <div className="grid grid-cols-2 gap-4">
                     {[{v:"50K+",l:"Daily Shipments"},{v:"500+",l:"Cities Served"},{v:"10K+",l:"Business Clients"},{v:"98.5%",l:"Success Rate"}].map((s,i)=>(
@@ -127,7 +127,7 @@ export default function About() {
             </blockquote>
             <div className="w-12 h-1 gradient-orange rounded-full mx-auto mb-4"/>
             <div className="font-semibold font-heading text-charcoal">Sonu Tiwari & Nikhil Pratap Singh</div>
-            <div className="text-graphite text-sm font-body">Co-Founders, VEXARO Courier</div>
+            <div className="text-graphite text-sm font-body">Co-Founders, VEXARO Courier Solution</div>
           </motion.div>
         </div>
       </section>
