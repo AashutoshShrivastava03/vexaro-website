@@ -69,16 +69,22 @@ const partners = [
     logo: "ecom-express.png",
   },
   {
-    name: "LogyXpress",
+    name: "LogoXpress",
     cat: "E-commerce",
     desc: "Trusted courier partner for last-mile delivery across seller network.",
-    logo: "logyxpress.png",
+    logo: "logoxpress.png",
   },
   {
     name: "Gati",
     cat: "E-Commerce",
     desc: "Powering deliveries for sellers across Tier 2 and Tier 3 cities.",
     logo: "gati.png",
+  },
+  {
+    name: "Shree Maruti",
+    cat: "Courier Service",
+    desc: "Easily track your shipment with online courier tracking tool.",
+    logo: "shree-maruti.png",
   },
 ];
 
@@ -195,7 +201,7 @@ export default function Partners() {
                 className="bg-white border border-soft-border rounded-card p-6 card-hover flex items-start gap-4"
               >
                 <div
-                  className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden`}
+                  className={`w-13 h-12 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden`}
                 >
                   <img
                     src={`/${p.logo}`}

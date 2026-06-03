@@ -39,9 +39,7 @@ export default function Footer() {
                 style={{ maxWidth: "200px" }}
               />
             </div>
-            <p className="text-white/50 text-sm font-body leading-relaxed mb-2">
-              VEXARO Courier
-            </p>
+
             <div className="flex gap-3">
               {[
                 {
@@ -77,6 +75,15 @@ export default function Footer() {
                 </a>
               ))}
             </div>
+
+            <p className="text-white/50 text-sm font-body leading-relaxed mb-2">
+              <br />
+              CIN: U53200MP2026PTC084168
+              <br />
+              <br />
+              Registration Number: 084168
+              <br />
+            </p>
           </motion.div>
 
           {/* Quick Links */}
@@ -216,22 +223,12 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="container-custom py-5 flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="text-white/30 text-xs font-body">
-            © {new Date().getFullYear()} VEXARO Courier
+            © {new Date().getFullYear()} 2026 VEXARO Courier Solution Private
+            Limited. All Rights Reserved.
           </p>
-          <div className="flex gap-5">
-            <Link
-              to="/privacy"
-              className="text-white/30 hover:text-orange/70 text-xs font-body transition-colors"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              to="/terms"
-              className="text-white/30 hover:text-orange/70 text-xs font-body transition-colors"
-            >
-              Terms & Conditions
-            </Link>
-          </div>
+          <p className="text-white/30 text-xs font-body">
+            Powered by Codentrixx Innovation Solutions Pvt. Ltd.
+          </p>
         </div>
       </div>
     </footer>
