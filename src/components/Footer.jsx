@@ -222,11 +222,11 @@ export default function Footer() {
 
       <div className="border-t border-white/10">
         <div className="container-custom py-5 flex flex-col md:flex-row items-center justify-between gap-3">
-          <p className="text-white/30 text-xs font-body">
+          <p className="text-white/40 text-xs font-body">
             © {new Date().getFullYear()} 2026 VEXARO Courier Solution Private
             Limited. All Rights Reserved.
           </p>
-          <p className="text-white/30 text-xs font-body">
+          <p className="text-white/40 text-xs font-body">
             Powered by Codentrixx Innovation Solutions Pvt. Ltd.
           </p>
         </div>

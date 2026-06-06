@@ -192,16 +192,16 @@ export default function Partners() {
             variants={staggerContainer}
             initial="hidden"
             animate={s1.isInView ? "visible" : "hidden"}
-            className="grid grid-cols-2 md:grid-cols-3 gap-5"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5"
           >
             {partners.map((p, i) => (
               <motion.div
                 key={i}
                 variants={staggerItem}
-                className="bg-white border border-soft-border rounded-card p-6 card-hover flex items-start gap-4"
+                className="bg-white border border-soft-border rounded-card p-6 card-hover flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-4 w-full min-h-full break-words"
               >
                 <div
-                  className={`w-13 h-12 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden`}
+                  className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden"
                 >
                   <img
                     src={`/${p.logo}`}
@@ -209,16 +209,16 @@ export default function Partners() {
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <div>
-                  <div className="font-bold font-heading text-charcoal">
+                <div className="w-full flex-1 min-w-0">
+                  <div className="font-bold font-heading text-charcoal text-base md:text-lg">
                     {p.name}
                   </div>
                   <div
-                    className={`text-xs font-heading font-medium mb-1 ${i % 2 === 0 ? "text-navy" : "text-orange"}`}
+                    className={`text-xs md:text-sm font-heading font-medium mb-1 ${i % 2 === 0 ? "text-navy" : "text-orange"}`}
                   >
                     {p.cat}
                   </div>
-                  <p className="text-graphite text-xs font-body leading-relaxed">
+                  <p className="text-graphite text-xs md:text-sm font-body leading-relaxed break-words">
                     {p.desc}
                   </p>
                 </div>
@@ -296,10 +296,10 @@ export default function Partners() {
                   key={i}
                   className={`rounded-card p-6 text-center ${i % 2 === 0 ? "gradient-navy" : "gradient-orange"}`}
                 >
-                  <div className="text-3xl font-bold font-heading text-white mb-1">
+                  <div className="text-2xl sm:text-3xl font-bold font-heading text-white mb-1 break-words">
                     {s.v}
                   </div>
-                  <div className="text-white/70 text-sm font-body">{s.l}</div>
+                  <div className="text-white/70 text-xs sm:text-sm font-body">{s.l}</div>
                 </div>
               ))}
             </motion.div>

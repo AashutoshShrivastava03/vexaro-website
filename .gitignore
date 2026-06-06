@@ -28,3 +28,6 @@ dist-ssr
 
 # SMTP testing file
 test-mail.js
+
+# Local Netlify folder
+.netlify

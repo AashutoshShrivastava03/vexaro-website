@@ -27,7 +27,10 @@ const validateForm = (payload) => {
   if (!payload.name?.trim()) errors.push("Name is required.");
   if (!payload.email?.trim() || !/\S+@\S+\.\S+/.test(payload.email))
     errors.push("Valid email is required.");
-  if (!payload.phone?.trim() || !/^[6-9]\d{9}$/.test(payload.phone.replace(/\s/g, "")))
+  if (
+    !payload.phone?.trim() ||
+    !/^[6-9]\d{9}$/.test(payload.phone.replace(/\s/g, ""))
+  )
     errors.push("Valid 10-digit mobile required.");
   if (!payload.subject?.trim()) errors.push("Subject is required.");
   if (!payload.message?.trim() || payload.message.trim().length < 10)
@@ -40,7 +43,7 @@ export const handler = async (event) => {
   if (event.httpMethod !== "POST") {
     return {
       statusCode: 405,
-      headers: { "Allow": "POST" },
+      headers: { Allow: "POST" },
       body: JSON.stringify({ success: false, error: "Method not allowed." }),
     };
   }
@@ -51,7 +54,10 @@ export const handler = async (event) => {
   } catch (error) {
     return {
       statusCode: 400,
-      body: JSON.stringify({ success: false, error: "Invalid request payload." }),
+      body: JSON.stringify({
+        success: false,
+        error: "Invalid request payload.",
+      }),
     };
   }
 
@@ -59,7 +65,10 @@ export const handler = async (event) => {
   if (validationErrors.length) {
     return {
       statusCode: 400,
-      body: JSON.stringify({ success: false, error: validationErrors.join(" ") }),
+      body: JSON.stringify({
+        success: false,
+        error: validationErrors.join(" "),
+      }),
     };
   }
 
@@ -117,13 +126,19 @@ export const handler = async (event) => {
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ success: true, message: "Message sent successfully." }),
+      body: JSON.stringify({
+        success: true,
+        message: "Message sent successfully.",
+      }),
     };
   } catch (error) {
     console.error("CONTACT FORM ERROR", error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ success: false, error: error.message || "Failed to send email." }),
+      body: JSON.stringify({
+        success: false,
+        error: error.message || "Failed to send email.",
+      }),
     };
   }
 };
