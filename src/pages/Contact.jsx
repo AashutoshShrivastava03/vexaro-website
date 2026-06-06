@@ -61,14 +61,9 @@ export default function Contact() {
     setLoading(true);
     setErrors({});
 
-    const endpoint = import.meta.env.VITE_CONTACT_FORM_ENDPOINT;
-    if (!endpoint) {
-      setLoading(false);
-      setErrors({
-        form: "Email delivery is not configured yet. Please set VITE_CONTACT_FORM_ENDPOINT to a secure production email API.",
-      });
-      return;
-    }
+    const endpoint =
+      import.meta.env.VITE_CONTACT_FORM_ENDPOINT ||
+      "/.netlify/functions/contact";
 
     try {
       const response = await fetch(endpoint, {
