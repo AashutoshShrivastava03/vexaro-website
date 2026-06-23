@@ -152,17 +152,173 @@ const journeySteps = [
   },
 ];
 
-function JourneyFlow({ isInView }) {
+function MobileShipmentJourney({ isInView }) {
   return (
-    <div className="relative rounded-card border border-soft-border bg-light-blue overflow-hidden p-5 md:p-8 shadow-card">
-      <div className="absolute inset-0 opacity-[0.05] bg-[linear-gradient(to_right,#1A3A8F_1px,transparent_1px),linear-gradient(to_bottom,#1A3A8F_1px,transparent_1px)] bg-[size:34px_34px]" />
+    <div className="block md:hidden relative py-2">
+      <div className="absolute left-[26px] top-8 bottom-10 w-1 bg-gradient-to-b from-navy via-orange to-navy opacity-20 rounded-full" />
       <motion.div
-        aria-hidden="true"
-        animate={{ x: ["-12%", "112%"] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-        className="absolute left-0 top-6 h-px w-40 bg-gradient-to-r from-transparent via-orange/60 to-transparent"
+        className="absolute left-[26px] top-8 bottom-10 w-1 bg-gradient-to-b from-navy via-orange to-navy rounded-full"
+        style={{ originY: 0 }}
+        initial={{ scaleY: 0 }}
+        animate={isInView ? { scaleY: 1 } : { scaleY: 0 }}
+        transition={{ duration: 1.8, ease: "easeInOut" }}
       />
-      <div className="relative hidden md:block h-56 mb-2">
+      
+      <motion.div
+        className="absolute left-[28px] flex h-6 w-6 items-center justify-center rounded-full gradient-orange shadow-orange -translate-x-1/2 -translate-y-1/2 z-0"
+        animate={{
+          top: ["10%", "35%", "65%", "90%", "10%"],
+        }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <FaBoxOpen className="text-white" size={10} />
+        <span className="absolute inset-0 rounded-full border border-orange/50 animate-ping" />
+      </motion.div>
+
+      <div className="flex flex-col gap-6 relative z-10">
+        {journeySteps.map((item, index) => {
+          const Icon = item.icon;
+          return (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, x: -20 }}
+              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+              transition={{ delay: 0.2 + index * 0.15, duration: 0.5 }}
+              className="flex items-start gap-4"
+            >
+              <div className="relative flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-white border border-soft-border shadow-md mt-1">
+                <div className={`absolute inset-1.5 rounded-full ${item.color === "orange" ? "gradient-orange" : "gradient-navy"}`} />
+                <Icon className="relative text-white" size={16} />
+                <span className="absolute -top-1 -right-1 rounded-full bg-charcoal px-1.5 py-0.5 text-[9px] font-bold text-white">
+                  {item.step}
+                </span>
+              </div>
+              <div className="bg-white rounded-card border border-soft-border p-4 shadow-sm flex-1">
+                <div className="flex items-center justify-between mb-2">
+                  <h4 className="font-heading text-base font-bold text-charcoal">
+                    {item.title}
+                  </h4>
+                  <div className={`flex h-8 w-8 items-center justify-center rounded-lg border ${item.color === "orange" ? "bg-orange-50 border-orange/20 text-orange" : "bg-navy-50 border-navy/20 text-navy"}`}>
+                    <Icon size={12} />
+                  </div>
+                </div>
+                <p className="text-xs leading-relaxed text-graphite font-body">
+                  {item.text}
+                </p>
+              </div>
+            </motion.div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+function TabletShipmentJourney({ isInView }) {
+  return (
+    <div className="hidden md:block lg:hidden">
+      <div className="relative h-24 mb-6">
+        <svg
+          className="absolute inset-0 w-full h-full"
+          viewBox="0 0 800 100"
+          fill="none"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M 100 50 L 700 50"
+            stroke="#DDE3F0"
+            strokeWidth="8"
+            strokeLinecap="round"
+          />
+          <motion.path
+            d="M 100 50 L 700 50"
+            stroke="url(#routeGradientTablet)"
+            strokeWidth="4"
+            strokeLinecap="round"
+            initial={{ pathLength: 0 }}
+            animate={isInView ? { pathLength: 1 } : { pathLength: 0 }}
+            transition={{ duration: 1.8, ease: "easeInOut" }}
+          />
+          <defs>
+            <linearGradient id="routeGradientTablet" x1="100" x2="700" y1="50" y2="50">
+              <stop stopColor="#1A3A8F" />
+              <stop offset="0.5" stopColor="#E06000" />
+              <stop offset="1" stopColor="#2855C8" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <motion.div
+          className="absolute flex h-10 w-10 items-center justify-center rounded-full gradient-orange shadow-orange -translate-y-1/2 -translate-x-1/2"
+          animate={{
+            left: ["12.5%", "37.5%", "62.5%", "87.5%", "12.5%"],
+          }}
+          style={{ top: "50%" }}
+          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <FaBoxOpen className="text-white" size={14} />
+          <span className="absolute inset-0 rounded-full border border-orange/50 animate-ping" />
+        </motion.div>
+        {[12.5, 37.5, 62.5, 87.5].map((leftPos, index) => {
+          const item = journeySteps[index];
+          const Icon = item.icon;
+          return (
+            <motion.div
+              key={item.step}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+              transition={{ delay: 0.2 + index * 0.15, duration: 0.4 }}
+              className="absolute -translate-x-1/2 -translate-y-1/2"
+              style={{ left: `${leftPos}%`, top: "50%" }}
+            >
+              <div className="relative flex h-14 w-14 items-center justify-center rounded-full bg-white border border-soft-border shadow-md">
+                <div className={`absolute inset-1.5 rounded-full ${item.color === "orange" ? "gradient-orange" : "gradient-navy"}`} />
+                <Icon className="relative text-white" size={16} />
+                <span className="absolute -top-1 -right-1 rounded-full bg-charcoal px-1.5 py-0.5 text-[9px] font-bold text-white">
+                  {item.step}
+                </span>
+              </div>
+            </motion.div>
+          );
+        })}
+      </div>
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        className="grid grid-cols-4 gap-3"
+      >
+        {journeySteps.map((item, index) => {
+          const Icon = item.icon;
+          return (
+            <motion.div
+              key={item.title}
+              variants={staggerItem}
+              whileHover={{ y: -4 }}
+              className="group rounded-card border border-white/80 bg-white/90 p-4 shadow-card backdrop-blur-sm flex flex-col items-center text-center"
+            >
+              <div className="mb-3">
+                <div className={`flex h-10 w-10 items-center justify-center rounded-xl border ${item.color === "orange" ? "bg-orange-50 border-orange/20 text-orange" : "bg-navy-50 border-navy/20 text-navy"} group-hover:scale-110 transition-transform`}>
+                  <Icon size={14} />
+                </div>
+              </div>
+              <h4 className="font-heading text-sm font-bold text-charcoal mb-2">
+                {item.title}
+              </h4>
+              <p className="text-[11px] leading-relaxed text-graphite font-body">
+                {item.text}
+              </p>
+            </motion.div>
+          );
+        })}
+      </motion.div>
+    </div>
+  );
+}
+
+function DesktopShipmentJourney({ isInView }) {
+  return (
+    <div className="hidden lg:block">
+      <div className="relative h-56 mb-2">
         <svg
           className="absolute inset-0 w-full h-full"
           viewBox="0 0 1000 250"
@@ -176,7 +332,7 @@ function JourneyFlow({ isInView }) {
           />
           <motion.path
             d="M70 150 C210 42 320 224 460 120 C590 24 710 206 900 74"
-            stroke="url(#routeGradient)"
+            stroke="url(#routeGradientDesktop)"
             strokeWidth="5"
             strokeLinecap="round"
             initial={{ pathLength: 0 }}
@@ -185,7 +341,7 @@ function JourneyFlow({ isInView }) {
           />
           <defs>
             <linearGradient
-              id="routeGradient"
+              id="routeGradientDesktop"
               x1="70"
               x2="900"
               y1="150"
@@ -241,7 +397,7 @@ function JourneyFlow({ isInView }) {
         variants={staggerContainer}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
-        className="relative grid gap-4 md:grid-cols-4"
+        className="relative grid gap-4 grid-cols-4"
       >
         {journeySteps.map((item, index) => {
           const Icon = item.icon;
@@ -274,6 +430,23 @@ function JourneyFlow({ isInView }) {
           );
         })}
       </motion.div>
+    </div>
+  );
+}
+
+function JourneyFlow({ isInView }) {
+  return (
+    <div className="relative rounded-card border border-soft-border bg-light-blue overflow-hidden p-5 md:p-8 shadow-card">
+      <div className="absolute inset-0 opacity-[0.05] bg-[linear-gradient(to_right,#1A3A8F_1px,transparent_1px),linear-gradient(to_bottom,#1A3A8F_1px,transparent_1px)] bg-[size:34px_34px]" />
+      <motion.div
+        aria-hidden="true"
+        animate={{ x: ["-12%", "112%"] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+        className="absolute left-0 top-6 h-px w-40 bg-gradient-to-r from-transparent via-orange/60 to-transparent"
+      />
+      <MobileShipmentJourney isInView={isInView} />
+      <TabletShipmentJourney isInView={isInView} />
+      <DesktopShipmentJourney isInView={isInView} />
     </div>
   );
 }
@@ -430,12 +603,14 @@ export default function Home() {
         style={{ minHeight: "100vh" }}
       >
         {/* Background Image using object-fit */}
-        <div className="absolute inset-0 pt-20 md:pt-24 z-0 pointer-events-none flex justify-end items-end">
+        <div className="absolute inset-0 z-0 pointer-events-none">
           <img
             src="/hero_background.png"
             alt="Courier Background"
-            className="w-full h-full object-contain object-bottom lg:object-right-bottom opacity-90"
+            className="w-full h-full object-cover lg:object-contain object-top lg:object-right-bottom opacity-[0.28] lg:opacity-90 pt-0 lg:pt-24"
           />
+          {/* Subtle white gradient overlay on mobile/tablet for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/20 to-white/90 lg:hidden" />
         </div>
 
         {/* Abstract Background Grid & Glows */}
@@ -451,14 +626,14 @@ export default function Home() {
           style={{ opacity: heroOpacity, y: heroY }}
         >
           {/* Adjusted padding to fit nicely */}
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-12 min-h-screen pt-24 lg:pt-28 pb-10">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12 min-h-screen pt-16 md:pt-24 lg:pt-28 pb-6 md:pb-10">
             {/* LEFT SIDE */}
             <div className="flex-1 max-w-xl lg:max-w-[50%] z-20">
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, type: "spring" }}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-navy/10 bg-white/90 backdrop-blur-md shadow-soft mb-5"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-navy/10 bg-white/90 backdrop-blur-md shadow-soft mb-4 md:mb-5"
               >
                 <span className="w-2 h-2 rounded-full bg-orange animate-pulse" />
                 <span className="text-charcoal font-semibold text-[10px] sm:text-xs uppercase tracking-widest font-heading">
@@ -474,7 +649,7 @@ export default function Home() {
                   delay: 0.1,
                   ease: [0.16, 1, 0.3, 1],
                 }}
-                className="text-5xl md:text-[4rem] lg:text-[4.5rem] font-black font-heading text-charcoal leading-[1.05] tracking-tighter mb-6"
+                className="text-5xl md:text-[4rem] lg:text-[4.5rem] font-black font-heading text-charcoal leading-[1.05] tracking-tighter mb-4 md:mb-6"
               >
                 DELIVERING
                 <span className="inline-block text-orange relative">
@@ -501,7 +676,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
-                className="text-graphite text-lg font-body leading-relaxed mb-8 max-w-md font-medium"
+                className="text-graphite text-base md:text-lg font-body leading-relaxed mb-5 md:mb-8 max-w-md font-medium"
               >
                 VEXARO powers 50,000+ daily shipments across 500+ cities —
                 combining technology, speed, and reliability to build the future
@@ -512,7 +687,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="flex flex-wrap gap-4 mb-8"
+                className="flex flex-wrap gap-3 md:gap-4 mb-6 md:mb-8"
               >
                 <Link
                   to="/track"

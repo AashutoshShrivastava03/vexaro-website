@@ -222,12 +222,20 @@ export default function Footer() {
 
       <div className="border-t border-white/10">
         <div className="container-custom py-5 flex flex-col md:flex-row items-center justify-between gap-3">
-          <p className="text-white/40 text-xs font-body">
+          <p className="text-white/75 text-xs font-body">
             © {new Date().getFullYear()} 2026 VEXARO Courier Solution Private
             Limited. All Rights Reserved.
           </p>
-          <p className="text-white/40 text-xs font-body">
-            Powered by Codentrixx Innovation Solutions Pvt. Ltd.
+          <p className="text-white/90 text-xs font-body">
+            Powered by{" "}
+            <a
+              href="https://www.codentrixx.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors duration-300 underline"
+            >
+              Codentrixx Innovation Solutions Pvt. Ltd.
+            </a>
           </p>
         </div>
       </div>

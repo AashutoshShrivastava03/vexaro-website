@@ -6,3 +6,8 @@
 [dev]
   command = "npm run dev"
   port = 4173
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
