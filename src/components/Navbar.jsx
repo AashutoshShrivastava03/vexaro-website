@@ -101,7 +101,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: "-100%" }}
             transition={{ type: "tween", duration: 0.3 }}
-            className="fixed inset-0 z-[90] bg-white flex flex-col"
+            className="fixed inset-0 z-[110] bg-white flex flex-col"
           >
             <div className="flex items-center justify-between px-6 py-5 border-b border-soft-border/50">
               <img
